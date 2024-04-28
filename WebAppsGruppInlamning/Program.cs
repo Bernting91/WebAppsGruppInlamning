@@ -1,3 +1,5 @@
+using WebAppsGruppInlamning.Service;
+
 namespace WebAppsGruppInlamning
 {
     public class Program
@@ -8,6 +10,9 @@ namespace WebAppsGruppInlamning
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddControllers();
+            builder.Services.AddTransient<CarService>();
+            builder.Services.AddTransient<ModificationService>();
 
             var app = builder.Build();
 
@@ -27,6 +32,7 @@ namespace WebAppsGruppInlamning
             app.UseAuthorization();
 
             app.MapRazorPages();
+            app.MapControllers();
 
             app.Run();
         }

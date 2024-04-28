@@ -5,6 +5,8 @@ namespace WebAppsGruppInlamning.Objects
 {
     public class Car
     {
+        //Tänkte om vi skall ha med CarName, CarBrand
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CarId { get; set; }
@@ -21,6 +23,5 @@ namespace WebAppsGruppInlamning.Objects
             TyreType = tyreType;
             WindowType = windowType;
         }
-        public Car () { }
     }
 }
