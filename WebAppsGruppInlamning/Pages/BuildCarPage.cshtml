@@ -1,0 +1,63 @@
+﻿@page
+@model WebAppsGruppInlamning.Pages.BuildCarPageModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/BuildCarPage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="dropdown" id="carDropdown">
+                <label for="carSelect">Car:</label>
+                <select id="carSelect">
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="MonsterTruck">Monster Truck</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Gocart">Gocart</option>
+                </select>
+            </div>
+            <div class="dropdown" id="wheelsDropdown">
+                <label for="wheelsSelect">Wheels:</label>
+                <select id="wheelsSelect">
+                    <option value="Regular">Regular</option>
+                    <option value="MonsterTruck">Monster Truck</option>
+                    <option value="Small">Small</option>
+                    <option value="Big">Big</option>
+                    <option value="F1">F1</option>
+                </select>
+            </div>
+            <div class="dropdown" id="windowsDropdown">
+                <label for="windowsSelect">Windows:</label>
+                <select id="windowsSelect">
+                    <option value="Colorful">Colorful</option>
+                    <option value="Tinted">Tinted</option>
+                    <option value="Regular">Regular</option>
+                </select>
+            </div>
+            <div class="dropdown" id="colorDropdown">
+                <label for="colorSelect">Color:</label>
+                <select id="colorSelect">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Orange">Orange</option>
+                </select>
+            </div>
+            <button type="button" class="build-car-btn">Build Car</button>
+        </div>
+        <div class="main-content">
+            <img src="~/lib/Images/MechanicCar.webp" alt="Descriptive Alt Text">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
