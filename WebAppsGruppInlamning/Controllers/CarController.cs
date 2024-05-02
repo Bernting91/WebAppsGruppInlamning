@@ -17,9 +17,28 @@ namespace WebAppsGruppInlamning.Controllers
         }
 
         [HttpGet("all")] //Funktion enbart för att testa funktionalitet 
-        public List<Car> GetAllCars() 
+        public List<Car> GetAllCars()
         {
             return carService.GetCarList();
+        }
+
+        [HttpGet("addCars")]
+        public string addTemplateCars()
+        {
+            Car car = new Car(2, "Coupe", "White", "Sport", "Tinted");
+            carService.AddCar(car);
+            return "great";
+        }
+
+        [HttpPost]
+        public ActionResult AddCar(Car car)
+        {
+            bool success = carService.AddCar(car);
+            if (success)
+            {
+                return Ok();
+            }
+            return BadRequest();
         }
     }
 }

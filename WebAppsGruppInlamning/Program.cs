@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using WebAppsGruppInlamning.Objects;
 using WebAppsGruppInlamning.Service;
 
 namespace WebAppsGruppInlamning
@@ -13,6 +15,11 @@ namespace WebAppsGruppInlamning
             builder.Services.AddControllers();
             builder.Services.AddTransient<CarService>();
             builder.Services.AddTransient<ModificationService>();
+
+            string connectionString = builder.Configuration.GetConnectionString("mySqlConnectionString");
+
+            builder.Services.AddDbContext<DatabaseContext>(options =>
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
             var app = builder.Build();
 
