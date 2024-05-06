@@ -20,3 +20,33 @@ html {
 body {
   margin-bottom: 60px;
 }
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-wrapper {
+    flex: 0 0 auto;
+}
+
+    .image-wrapper img {
+        width: 400px;
+        height: auto;
+        transition: transform 0.2s;
+    }
+
+        .image-wrapper img:hover {
+            transform: scale(1.1);
+        }
+
+@media (max-width: 480px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .image-wrapper img {
+        width: 30px;
+    }
+}

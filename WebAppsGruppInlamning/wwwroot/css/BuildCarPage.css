@@ -1,0 +1,82 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+header, footer {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #fff;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - (header height + footer height));
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.main-content {
+    width: 80%;
+    overflow: hidden;
+}
+
+    .main-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.build-car-btn {
+    padding: 10px 20px;
+    background-color: midnightblue;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+    .build-car-btn:hover {
+        background-color: darkred;
+    }
+
+.dropdown {
+    margin-bottom: 10px;
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+    .dropdown label {
+        font-weight: bold;
+        margin-right: 5px;
+        color: #333;
+    }
+
+    .dropdown select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #f8f8f8;
+        cursor: pointer;
+    }
+
+        .dropdown select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
