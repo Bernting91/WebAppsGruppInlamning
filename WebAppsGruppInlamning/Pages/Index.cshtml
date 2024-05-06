@@ -4,7 +4,23 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="image-wrapper">
+        <img src="~/lib/Images/FrontDesk.webp" alt="Image 1" onclick="navigateTo('FrontDesk')">
+    </div>
+    <div class="image-wrapper">
+        <img src="~/lib/Images/Garage.webp" alt="Garage" onclick="navigateTo('GaragePage')">
+    </div>
+    <div class="image-wrapper">
+        <img src="image3.jpg" alt="Image 3" onclick="navigateTo('Page3')">
+    </div>
+    <div class="image-wrapper">
+        <img src="~/lib/Images/Mechanic.webp" alt="Image 4" onclick="navigateTo('BuildCarPage')">
+    </div>
 </div>
+<script>
+    function navigateTo(pageName) {
+        window.location.href = '/' + pageName;
+    }
+</script>
+
