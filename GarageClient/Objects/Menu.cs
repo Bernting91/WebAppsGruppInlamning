@@ -13,6 +13,7 @@ namespace GarageClient.Objects
 
         public void Run()
         {
+            cars = request.GetCars();
             MainMenu();
         }
 
@@ -27,8 +28,8 @@ namespace GarageClient.Objects
                 Console.WriteLine("=====================");
                 Console.WriteLine("1. Show Cars");
                 Console.WriteLine("2. Add Car");
-                Console.WriteLine("3. Delete Car");
-                Console.WriteLine("4. Update Car");
+                Console.WriteLine("3. Update Car");
+                Console.WriteLine("4. Delete Car");
                 Console.WriteLine("0. Exit");
 
                 string input = Console.ReadLine();
@@ -41,6 +42,9 @@ namespace GarageClient.Objects
                     case "2":
                         AddCarMenu();
                         break;
+                    case "3":
+                        UpdateCarMenu();
+                        break;
                     case "0":
                         loop = false;
                         break;
@@ -48,32 +52,168 @@ namespace GarageClient.Objects
             }
         }
 
-        private void AddCarMenu()
+        private void UpdateCarMenu()
         {
-            bool loop = true;
-            
-            while (loop)
+            string carType;
+            string colour;
+            string tires;
+
+            while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Add Car");
-                Console.WriteLine("=========");
-                Console.WriteLine("Type");
-                Console.WriteLine("------");
-                Console.WriteLine("1. Coupe");
-                Console.WriteLine("2. Sport");
+                Console.WriteLine("Choose a car by ID");
+                Console.WriteLine();
 
-                string input = Console.ReadLine();
-
-                if (input == "0")
+                foreach (Car car in cars)
                 {
-                    loop = false;
+                    Console.WriteLine($"Id: {car.CarId} | Type: {car.CarType} | Colour: {car.Colour} | Tires: {car.TyreType}");
+                }
+                Console.WriteLine("0. Back");
+                Console.WriteLine();
+
+                try
+                {
+                    int id = Convert.ToInt32(Console.ReadLine());
+                    if (id == 0)
+                        return;
+
+                    carType = ChooseCarType("Edit");
+                    if (carType == "")
+                        return;
+
+                    colour = ChooseCarColour("Edit");
+                    if (colour == "")
+                        return;
+
+                    tires = ChooseTires("Edit");
+                    if (tires == "")
+                        return;
+
+                    request.UpdateCar(id, carType, colour, tires);
+                    cars = request.GetCars();
+                    Console.ReadKey();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
                 }
             }
         }
 
-        private void AddCar()
+        private void AddCarMenu()
         {
-            request.AddCar(new Car(1, "Coupe", "White", "Sport", "Tinted"));
+            string carType;
+            string colour;
+            string tires;
+
+            carType = ChooseCarType("Add");
+            if (carType == "")
+                return;
+
+            colour = ChooseCarColour("Add");
+            if (colour == "")
+                return;
+
+            tires = ChooseTires("Add");
+            if (tires == "")
+                return;
+
+            Car car = new Car(carType, colour, tires);
+            AddCar(car);
+        }
+
+        private string ChooseCarType(string addorEdit)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine($"{addorEdit} Car");
+                Console.WriteLine("=========");
+                Console.WriteLine("Type");
+                Console.WriteLine("---------");
+                Console.WriteLine("1. Ferrari");
+                Console.WriteLine("2. Monster Truck");
+                Console.WriteLine("3. SUV");
+                Console.WriteLine("0. Back");
+
+
+
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        return "Ferrari";
+                    case "2":
+                        return "Monster Truck";
+                    case "3":
+                        return "SUV";
+                    case "0":
+                        return "";
+                }
+            }
+        }
+
+        private string ChooseCarColour(string addorEdit)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine($"{addorEdit} Car");
+                Console.WriteLine("=========");
+                Console.WriteLine("Colour");
+                Console.WriteLine("---------");
+                Console.WriteLine("1. Red");
+                Console.WriteLine("2. Blue");
+                Console.WriteLine("3. Yellow");
+                Console.WriteLine("0. Back");
+
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        return "Red";
+                    case "2":
+                        return "Blue";
+                    case "3":
+                        return "Yellow";
+                    case "0":
+                        return "";
+                }
+            }
+        }
+
+        private string ChooseTires(string addorEdit)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine($"{addorEdit} Car");
+                Console.WriteLine("=========");
+                Console.WriteLine("Tires");
+                Console.WriteLine("---------");
+                Console.WriteLine("1. Regular");
+                Console.WriteLine("2. Monster Truck");
+                Console.WriteLine("0. Back");
+
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        return "Regular";
+                    case "2":
+                        return "Monster Truck";
+                    case "0":
+                        return "";
+                }
+            }
+        }
+
+        private void AddCar(Car car)
+        {
+            request.AddCar(car);
             Console.ReadKey();
         }
 
@@ -81,7 +221,10 @@ namespace GarageClient.Objects
         {
             Console.Clear();
 
-            request.GetCars();
+            foreach (Car car in cars)
+            {
+                Console.WriteLine($"Id: {car.CarId} | Type: {car.CarType} | Colour: {car.Colour} | Tires: {car.TyreType}");
+            }
 
             Console.Write("Press any key to continue...");
             Console.ReadKey();
