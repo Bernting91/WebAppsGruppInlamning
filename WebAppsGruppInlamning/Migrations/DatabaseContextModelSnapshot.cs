@@ -41,10 +41,6 @@ namespace WebAppsGruppInlamning.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("WindowType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.HasKey("CarId");
 
                     b.ToTable("Cars");

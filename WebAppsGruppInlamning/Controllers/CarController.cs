@@ -22,18 +22,27 @@ namespace WebAppsGruppInlamning.Controllers
             return carService.GetCarList();
         }
 
-        [HttpGet("addCars")]
-        public string addTemplateCars()
+        [HttpGet("getCar")]
+        public Car GetCarById(int id)
         {
-            Car car = new Car(2, "Coupe", "White", "Sport", "Tinted");
-            carService.AddCar(car);
-            return "great";
+            return carService.GetCarById(id);
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         public ActionResult AddCar(Car car)
         {
             bool success = carService.AddCar(car);
+            if (success)
+            {
+                return Ok();
+            }
+            return BadRequest();
+        }
+
+        [HttpPut("update")]
+        public ActionResult UpdateCar(Car car)
+        {
+            bool success = carService.UpdateCar(car);
             if (success)
             {
                 return Ok();

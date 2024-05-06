@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebAppsGruppInlamning
 build_property.RootNamespace = WebAppsGruppInlamning
-build_property.ProjectDir = C:\Users\Tim Hahn Colbro\source\repos\WebAppsGruppInlamning\WebAppsGruppInlamning\
+build_property.ProjectDir = C:\Users\Emil\source\repos\WebAppsGruppInlamning\WebAppsGruppInlamning\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Tim Hahn Colbro\source\repos\WebAppsGruppInlamning\WebAppsGruppInlamning
+build_property.MSBuildProjectDirectory = C:\Users\Emil\source\repos\WebAppsGruppInlamning\WebAppsGruppInlamning
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/BuildCarPage.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/BuildCarPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVpbGRDYXJQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Error.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/FrontDesk.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/FrontDesk.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnJvbnREZXNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/GaragePage.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/GaragePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FyYWdlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Index.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Privacy.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/_ViewImports.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/_ViewStart.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tim Hahn Colbro/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Shared/_Layout.cshtml]
+[C:/Users/Emil/source/repos/WebAppsGruppInlamning/WebAppsGruppInlamning/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4k9x6ybxuh
