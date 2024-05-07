@@ -14,7 +14,6 @@ namespace WebAppsGruppInlamning
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
             builder.Services.AddTransient<CarService>();
-            builder.Services.AddTransient<ModificationService>();
 
             string connectionString = builder.Configuration.GetConnectionString("mySqlConnectionString");
 

@@ -11,10 +11,9 @@ namespace WebAppsGruppInlamning.Service
         public CarService(DatabaseContext db)
         {
             this.db = db;
-            //Fortsätta med fler
         }
 
-        public List<Car> GetCarList() //Funktion enbart för att testa funktionalitet 
+        public List<Car> GetCarList()
         {
             return db.Cars.ToList();
         }
@@ -49,6 +48,7 @@ namespace WebAppsGruppInlamning.Service
                 return true;
             }
             return false;
+
         }
 
         public bool DeleteCar(int id)
