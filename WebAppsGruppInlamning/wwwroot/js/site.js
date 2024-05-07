@@ -58,12 +58,13 @@ function hideTooltip() {
     additionalModal.style.display = 'none';
 }
 window.addEventListener('click', function (event) {
+    event.preventDefault();
     var modal = document.getElementById('myModal');
     var additionalModal = document.getElementById('additionalModal');
     var clickedElement = event.target;
 
     if (clickedElement.classList.contains('image-wrapper') || clickedElement.tagName === 'IMG') {
-        return; // Do nothing if the clicked element is one of the images
+        return;
     }
 
     if (!modal.contains(clickedElement) && clickedElement.id !== 'myModal' && clickedElement !== additionalModal && clickedElement !== modal) {
@@ -71,3 +72,14 @@ window.addEventListener('click', function (event) {
         additionalModal.style.display = 'none';
     }
 });
+    function navigateToBuildCarPage() {
+        window.location.href = '/BuildCarPage';
+    }
+
+    function navigateToGaragePage() {
+        window.location.href = '/GaragePage';
+    }
+    function navigateToIndex() {
+        window.location.href = '/Index';
+        }
+

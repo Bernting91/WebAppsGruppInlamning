@@ -3,12 +3,21 @@
 }
 
 header, footer {
-    width: 100%;
     padding: 10px 20px;
     text-align: center;
-    background-color: #fff;
-    color: #fff;
     height: auto;
+}
+footer {
+    background-color: cornflowerblue;
+}
+header {
+    padding: 10px 20px; /* Keep the same padding as other pages */
+    background-color: black;
+    height: auto; /* Let the height adjust based on content */
+}
+body    {
+    background-color: black;
+    height: 100%;
 }
 
 .container {
