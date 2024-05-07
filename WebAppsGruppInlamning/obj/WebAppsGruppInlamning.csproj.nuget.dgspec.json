@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tim Hahn Colbro\\source\\repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {}
+    "C:\\Users\\bernt\\OneDrive\\Dokument\\RepositorySKOLA\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tim Hahn Colbro\\source\\repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {
+    "C:\\Users\\bernt\\OneDrive\\Dokument\\RepositorySKOLA\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tim Hahn Colbro\\source\\repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
+        "projectUniqueName": "C:\\Users\\bernt\\OneDrive\\Dokument\\RepositorySKOLA\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
         "projectName": "WebAppsGruppInlamning",
-        "projectPath": "C:\\Users\\Tim Hahn Colbro\\source\\repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
-        "packagesPath": "C:\\Users\\Tim Hahn Colbro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tim Hahn Colbro\\source\\repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\obj\\",
+        "projectPath": "C:\\Users\\bernt\\OneDrive\\Dokument\\RepositorySKOLA\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
+        "packagesPath": "C:\\Users\\bernt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bernt\\OneDrive\\Dokument\\RepositorySKOLA\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tim Hahn Colbro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bernt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -38,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -83,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
