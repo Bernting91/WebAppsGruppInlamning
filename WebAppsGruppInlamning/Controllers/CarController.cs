@@ -51,7 +51,18 @@ namespace WebAppsGruppInlamning.Controllers
             }
             return BadRequest();
         }
-
+        
+        [HttpDelete("delete")]
+        public ActionResult DeleteCar(int id)
+        {
+            bool success = carService.DeleteCar(id);
+            if (success)
+            {
+                return Ok();
+            }
+            return BadRequest();
+        }
+            
         [HttpPost("saveCar")]
         public IActionResult SaveCar(Car car)
         {
