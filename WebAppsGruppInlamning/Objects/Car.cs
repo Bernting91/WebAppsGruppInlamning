@@ -13,15 +13,12 @@ namespace WebAppsGruppInlamning.Objects
         public string CarType { get; set; }
         public string Colour { get; set; }
         public string TyreType { get; set; }
-        public string WindowType { get; set; }
 
-        public Car(int carId, string carType, string colour, string tyreType, string windowType)
+        public Car(string carType, string colour, string tyreType)
         {
-            CarId = carId;
             CarType = carType;
             Colour = colour;
             TyreType = tyreType;
-            WindowType = windowType;
         }
     }
 }

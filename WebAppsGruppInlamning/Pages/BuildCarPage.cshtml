@@ -3,8 +3,9 @@
 @{
 }
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Build Your Car</title>
     <link rel="stylesheet" type="text/css" href="~/css/BuildCarPage.css">
 </head>
 <body>
@@ -16,7 +17,6 @@
                     <option value="Ferrari">Ferrari</option>
                     <option value="MonsterTruck">Monster Truck</option>
                     <option value="SUV">SUV</option>
-                    <option value="Gocart">Gocart</option>
                 </select>
             </div>
             <div class="dropdown" id="wheelsDropdown">
@@ -24,17 +24,6 @@
                 <select id="wheelsSelect">
                     <option value="Regular">Regular</option>
                     <option value="MonsterTruck">Monster Truck</option>
-                    <option value="Small">Small</option>
-                    <option value="Big">Big</option>
-                    <option value="F1">F1</option>
-                </select>
-            </div>
-            <div class="dropdown" id="windowsDropdown">
-                <label for="windowsSelect">Windows:</label>
-                <select id="windowsSelect">
-                    <option value="Colorful">Colorful</option>
-                    <option value="Tinted">Tinted</option>
-                    <option value="Regular">Regular</option>
                 </select>
             </div>
             <div class="dropdown" id="colorDropdown">
@@ -43,17 +32,19 @@
                     <option value="Red">Red</option>
                     <option value="Blue">Blue</option>
                     <option value="Yellow">Yellow</option>
-                    <option value="Orange">Orange</option>
                 </select>
             </div>
             <button type="button" class="build-car-btn">Build Car</button>
         </div>
         <div class="main-content">
-            <img src="~/lib/Images/MechanicCar.webp" alt="Descriptive Alt Text">
+            <img src="~/lib/Images/MechanicCar.webp" alt="Placeholder Car Image">
         </div>
     </div>
+    <script src="~/js/BuildCarPage.js"></script>
 </body>
 </html>
+
+
 
 
 

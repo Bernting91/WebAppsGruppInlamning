@@ -3,24 +3,44 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <img src="~/lib/Images/FrontDesk.webp" alt="Background FrontDesk">
+        <div class="image-wrapper" style="position: absolute; top: 10%; left: 10%;">
+            <img src="~/lib/Images/Garage.webp" alt="Garage" onclick="openModal('GaragePage')" title="Go to the garage!">
+        </div>
+        <div class="image-wrapper" style="position: absolute; top: 50%; left: 10%;">
+            <img src="~/lib/Images/Mechanic.webp" alt="Image 4" onclick="openModal('BuildCarPage')" title="Build your car!">
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>Choose your mechanic!</p>
+            <div class="mechanic" onmouseover="showTooltip('Minh', this)" onmouseout="hideTooltip()" onclick="navigateTo()">Minh</div>
+            <div class="mechanic" onmouseover="showTooltip('Robert', this)" onmouseout="hideTooltip()" onclick="navigateTo()">Robert</div>
+            <div class="mechanic" onmouseover="showTooltip('Tim', this)" onmouseout="hideTooltip()" onclick="navigateTo()">Tim</div>
+            <div class="mechanic" onmouseover="showTooltip('Emil', this)" onmouseout="hideTooltip()" onclick="navigateTo()">Emil</div>
+        </div>
+        <div id="tooltip" class="tooltip">
+            <img id="tooltip-image" src="" alt="Mechanic's picture">
+            <p id="tooltip-text">Some text about the mechanic</p>
+        </div>
+    </div>
 
-<div class="container">
-    <div class="image-wrapper">
-        <img src="~/lib/Images/FrontDesk.webp" alt="Image 1" onclick="navigateTo('FrontDesk')">
+    <div id="additionalModal" class="additional-modal">
+        <div class="modal-content">
+            <img id="additionalModal-image" src="" alt="Mechanic's picture">
+            <p id="additionalModal-text">Some additional text about the mechanic</p>
+        </div>
     </div>
-    <div class="image-wrapper">
-        <img src="~/lib/Images/Garage.webp" alt="Garage" onclick="navigateTo('GaragePage')">
-    </div>
-    <div class="image-wrapper">
-        <img src="image3.jpg" alt="Image 3" onclick="navigateTo('Page3')">
-    </div>
-    <div class="image-wrapper">
-        <img src="~/lib/Images/Mechanic.webp" alt="Image 4" onclick="navigateTo('BuildCarPage')">
-    </div>
-</div>
-<script>
-    function navigateTo(pageName) {
-        window.location.href = '/' + pageName;
-    }
-</script>
-
+    <script src="~/js/site.js"></script>
+</body>
+</html>

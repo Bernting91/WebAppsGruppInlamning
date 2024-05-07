@@ -1,25 +1,33 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+}
+
+.navbar-nav .nav-link {
+    color: red !important;
+}
+.navbar {
+    background-color: cornflowerblue !important;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
 .container {
     display: flex;
     flex-wrap: nowrap;
@@ -50,3 +58,74 @@ body {
         width: 30px;
     }
 }
+body {
+    background-image: url('~/lib/Images/FrontDesk.webp');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center;
+    background-color: black !important;
+}
+footer {
+    background-color: cornflowerblue !important;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 30%;
+    overflow: auto;
+    background-color: transparent;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.mechanic:hover {
+    background-color: lemonchiffon;
+    cursor: pointer;
+}
+
+.modal-content p:hover {
+    background-color: lemonchiffon;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#tooltip-image {
+    max-width: 100px;
+    max-height: 100px;
+}
+.additional-modal {
+    display: none;
+    position: absolute;
+    z-index: 2; 
+    left: calc(15% + 1px); 
+    top: 20%;
+    transform: translateY(-50%);
+    width: 300px; 
+    height: auto;
+    background-color: transparent;
+    padding: 20px;
+    border: 0px solid #888;
+    border-radius: 0px;
+}
+
+
+
