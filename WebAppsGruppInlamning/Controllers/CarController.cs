@@ -10,10 +10,12 @@ namespace WebAppsGruppInlamning.Controllers
     public class CarController : ControllerBase
     {
         CarService carService;
+        DatabaseContext db;
 
-        public CarController(CarService carService)
+        public CarController(CarService carService, DatabaseContext db)
         {
             this.carService = carService;
+            this.db = db;
         }
 
         [HttpGet("all")] //Funktion enbart för att testa funktionalitet 
@@ -48,6 +50,21 @@ namespace WebAppsGruppInlamning.Controllers
                 return Ok();
             }
             return BadRequest();
+        }
+
+        [HttpPost("saveCar")]
+        public IActionResult SaveCar(Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Cars.Add(car);
+                db.SaveChanges();
+                return new JsonResult("A new car has been saved.");
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
     }
 }
