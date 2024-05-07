@@ -98,21 +98,3 @@
 .hover-area:hover + .hover-image + .hover-text {
     display: block;
 }
-
-.back-to-index {
-    position: absolute;
-    bottom: 10px;
-    left: 30px;
-    width: 120px;
-    height: auto;
-}
-
-    .back-to-index img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.2s;
-    }
-
-        .back-to-index img:hover {
-            transform: scale(1.1);
-        }
