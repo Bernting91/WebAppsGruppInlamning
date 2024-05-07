@@ -37,6 +37,15 @@
     z-index: 100;
     border-radius: 0 0 6px 6px;
 }
+
+.dropdown select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f8f8f8;
+    cursor: pointer;
+}
 footer {
     background-color: cornflowerblue;
 }
