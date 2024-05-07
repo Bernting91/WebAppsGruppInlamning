@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "JPPAksoARiomiEtLBClt5PZXoqato6cnx69s3Erqah5YsvpTmGhFFpyOq5qa88yWuGdBJY5SOAxZs0cZF0p8fw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bernt\\OneDrive\\Dokument\\RepositorySKOLA\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
+=======
+  "dgSpecHash": "qFh5BSqidE9Y81FKKbe3W4pcnBm4JGTFDpIZxLbiyHjw//Y1rMxIY/mBKU8vY43+AEQD3Jmk2FN1EGaF91zgoQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tim Hahn Colbro\\Source\\Repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
+>>>>>>> e036bcfcc9ea3bf39014423439648934caafa9e0
   "expectedPackageFiles": [
     "C:\\Users\\bernt\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\bernt\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
