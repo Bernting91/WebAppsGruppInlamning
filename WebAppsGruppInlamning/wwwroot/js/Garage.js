@@ -11,50 +11,20 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdownOptions.style.display = dropdownOptions.style.display === 'block' ? 'none' : 'block';
         });
     }
+    document.querySelectorAll('.option').forEach(function (option) {
+        option.addEventListener('click', function () {
+            dropdownSelected.textContent = this.textContent;
+            dropdownOptions.style.display = 'none';
+        });
+    });
 
-    // Hämta bildata från backend
-    async function fetchGarageData() {
-        try {
-            // Backend
-            // Ersätt denna URL för att hämta garagedata.
-            const response = await fetch('/api/garage');
-            const cars = await response.json();
-
-            cars.forEach(car => {
-                const optionDiv = document.createElement('div');
-                optionDiv.className = 'option';
-                optionDiv.innerHTML = `${car.carType} - ${car.carColour} <span class="trashcan">&#x1F5D1;</span>`;
-                optionDiv.addEventListener('click', function () {
-                    dropdownSelected.textContent = `${car.carType} - ${car.carColour}`;
-                    dropdownOptions.style.display = 'none';
-                });
-
-                // papperskorgsikon
-                optionDiv.querySelector('.trashcan').addEventListener('click', async function (event) {
-                    event.stopPropagation(); // Förhindra att alternativet väljs
-                    const parentElement = this.parentElement;
-
-                    // Backend
-                    // Ersätt denna URL för att ta bort en bil.
-                    const carId = car.carId; // Förutsatt att bilens ID finns tillgängligt
-                    const deleteResponse = await fetch(`/api/garage/${carId}`, {
-                        method: 'DELETE'
-                    });
-
-                    // Ta bort från DOM om raderingen lyckades
-                    if (deleteResponse.ok) {
-                        parentElement.remove();
-                    } else {
-                        console.error('Misslyckades med att ta bort bilen.');
-                    }
-                });
-
-                dropdownOptions.appendChild(optionDiv);
-            });
-        } catch (error) {
-            console.error('Fel vid hämtning av garagedata:', error);
-        }
-    }
-    fetchGarageData();
+    // tar bort iconen soptunna
+    document.querySelectorAll('.trashcan').forEach(function (icon) {
+        icon.addEventListener('click', function (event) {
+            event.stopPropagation();
+            this.parentElement.remove();
+        });
+    });
 });
+
 
