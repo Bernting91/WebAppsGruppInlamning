@@ -32,6 +32,14 @@ namespace GarageClient.Objects
             HttpResponseMessage response = client.PutAsync(uri, content).Result;
 
             Console.WriteLine(response.StatusCode);
+
+            if (response.IsSuccessStatusCode)
+                Console.WriteLine("Car Updated.");
+            else
+                Console.WriteLine("Something went wrong.");
+
+            Thread.Sleep(1000);
+
         }
 
         public void AddCar(Car car)
@@ -44,6 +52,29 @@ namespace GarageClient.Objects
             HttpResponseMessage response = client.PostAsync(uri, content).Result;
 
             Console.WriteLine(response.StatusCode);
+
+            if (response.IsSuccessStatusCode)
+                Console.WriteLine("Car Added.");
+            else
+                Console.WriteLine("Something went wrong.");
+
+            Thread.Sleep(1000);
+        }
+
+        public void DeleteCar(int id)
+        {
+            Uri uri = new Uri($"https://localhost:7016/api/car/delete?id={id}");
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = client.DeleteAsync(uri).Result;
+
+            Console.WriteLine(response.StatusCode);
+
+            if(response.IsSuccessStatusCode)
+                Console.WriteLine("Car Deleted");
+            else
+                Console.WriteLine("Something went wrong.");
+
+            Thread.Sleep(1000);
         }
     }
 }

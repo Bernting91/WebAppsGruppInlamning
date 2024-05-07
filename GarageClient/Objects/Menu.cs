@@ -32,7 +32,7 @@ namespace GarageClient.Objects
                 Console.WriteLine("4. Delete Car");
                 Console.WriteLine("0. Exit");
 
-                string input = Console.ReadLine();
+                string? input = Console.ReadLine();
 
                 switch (input)
                 {
@@ -45,9 +45,44 @@ namespace GarageClient.Objects
                     case "3":
                         UpdateCarMenu();
                         break;
+                    case "4":
+                        DeleteCarMenu();
+                        break;
                     case "0":
                         loop = false;
                         break;
+                }
+            }
+        }
+
+        private void DeleteCarMenu()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Delete a car by ID");
+                Console.WriteLine();
+
+                foreach (Car car in cars)
+                {
+                    Console.WriteLine($"Id: {car.CarId} | Type: {car.CarType} | Colour: {car.Colour} | Tires: {car.TyreType}");
+                }
+                Console.WriteLine("0. Back");
+                Console.WriteLine();
+
+                try
+                {
+                    int id = Convert.ToInt32(Console.ReadLine());
+                    if (id == 0)
+                        return;
+
+                    request.DeleteCar(id);
+                    cars = request.GetCars();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Thread.Sleep(500);
                 }
             }
         }
@@ -96,6 +131,7 @@ namespace GarageClient.Objects
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+                    Thread.Sleep(500);
                 }
             }
         }
@@ -120,6 +156,7 @@ namespace GarageClient.Objects
 
             Car car = new Car(carType, colour, tires);
             AddCar(car);
+            cars = request.GetCars();
         }
 
         private string ChooseCarType(string addorEdit)

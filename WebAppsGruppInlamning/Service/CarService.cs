@@ -50,5 +50,18 @@ namespace WebAppsGruppInlamning.Service
             }
             return false;
         }
+
+        public bool DeleteCar(int id)
+        {
+            Car carToDelete = db.Cars.FirstOrDefault(c => c.CarId == id);
+
+            if (carToDelete != null)
+            {
+                db.Cars.Remove(carToDelete);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }
