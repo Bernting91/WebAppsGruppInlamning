@@ -99,12 +99,11 @@
     display: block;
 }
 
-/* Adjusted styles for "Back to Home" image */
 .back-to-index {
     position: absolute;
     bottom: 10px;
-    left: 30px; /* Moved 20px to the right */
-    width: 120px; /* Slightly increased size */
+    left: 30px;
+    width: 120px;
     height: auto;
 }
 
@@ -115,5 +114,5 @@
     }
 
         .back-to-index img:hover {
-            transform: scale(1.1); /* Apply hover scaling effect */
+            transform: scale(1.1);
         }
