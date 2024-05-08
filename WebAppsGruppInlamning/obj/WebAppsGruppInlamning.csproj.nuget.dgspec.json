@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\minht\\OneDrive\\Skrivbord\\ASP.NETgruppuppgift\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {}
+    "C:\\Users\\Tim Hahn Colbro\\Source\\Repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {}
   },
   "projects": {
-    "C:\\Users\\minht\\OneDrive\\Skrivbord\\ASP.NETgruppuppgift\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {
+    "C:\\Users\\Tim Hahn Colbro\\Source\\Repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\minht\\OneDrive\\Skrivbord\\ASP.NETgruppuppgift\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
+        "projectUniqueName": "C:\\Users\\Tim Hahn Colbro\\Source\\Repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
         "projectName": "WebAppsGruppInlamning",
-        "projectPath": "C:\\Users\\minht\\OneDrive\\Skrivbord\\ASP.NETgruppuppgift\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
-        "packagesPath": "C:\\Users\\minht\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\minht\\OneDrive\\Skrivbord\\ASP.NETgruppuppgift\\WebAppsGruppInlamning\\obj\\",
+        "projectPath": "C:\\Users\\Tim Hahn Colbro\\Source\\Repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\WebAppsGruppInlamning.csproj",
+        "packagesPath": "C:\\Users\\Tim Hahn Colbro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tim Hahn Colbro\\Source\\Repos\\WebAppsGruppInlamning\\WebAppsGruppInlamning\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\minht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tim Hahn Colbro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
