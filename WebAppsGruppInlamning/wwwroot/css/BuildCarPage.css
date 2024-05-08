@@ -2,19 +2,6 @@
     box-sizing: border-box;
 }
 
-header, footer {
-    padding: 10px 20px;
-    text-align: center;
-    height: auto;
-}
-footer {
-    background-color: cornflowerblue;
-}
-header {
-    padding: 10px 20px; /* Keep the same padding as other pages */
-    background-color: black;
-    height: auto; /* Let the height adjust based on content */
-}
 body    {
     background-color: black;
     height: 100%;
