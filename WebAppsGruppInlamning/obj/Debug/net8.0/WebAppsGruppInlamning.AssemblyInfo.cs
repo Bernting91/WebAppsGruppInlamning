@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAppsGruppInlamning")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24319683118e657fbf0874181dde5c787a27054d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc823348431f09bf716829dcea7d0fc2c7c2191d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAppsGruppInlamning")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAppsGruppInlamning")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
