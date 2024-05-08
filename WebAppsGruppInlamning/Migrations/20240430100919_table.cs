@@ -32,21 +32,6 @@ namespace WebAppsGruppInlamning.Migrations
                     table.PrimaryKey("PK_Cars", x => x.CarId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Modifications",
-                columns: table => new
-                {
-                    ModificationId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    ModificationName = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Modifications", x => x.ModificationId);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
         }
 
         /// <inheritdoc />
@@ -54,9 +39,6 @@ namespace WebAppsGruppInlamning.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Cars");
-
-            migrationBuilder.DropTable(
-                name: "Modifications");
         }
     }
 }
