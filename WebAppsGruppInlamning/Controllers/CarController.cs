@@ -10,15 +10,13 @@ namespace WebAppsGruppInlamning.Controllers
     public class CarController : ControllerBase
     {
         CarService carService;
-        DatabaseContext db;
 
-        public CarController(CarService carService, DatabaseContext db)
+        public CarController(CarService carService)
         {
             this.carService = carService;
-            this.db = db;
         }
 
-        [HttpGet("all")] //Funktion enbart för att testa funktionalitet 
+        [HttpGet("all")] 
         public List<Car> GetAllCars()
         {
             return carService.GetCarList();
@@ -33,44 +31,38 @@ namespace WebAppsGruppInlamning.Controllers
         [HttpPost("add")]
         public ActionResult AddCar(Car car)
         {
-            bool success = carService.AddCar(car);
-            if (success)
+            if (ModelState.IsValid)
             {
-                return Ok();
+                carService.AddCar(car);
+                return new JsonResult("A new car has been built and saved.");
             }
-            return BadRequest();
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
 
         [HttpPut("update")]
         public ActionResult UpdateCar(Car car)
         {
-            bool success = carService.UpdateCar(car);
-            if (success)
+            if (ModelState.IsValid)
             {
-                return Ok();
+                carService.UpdateCar(car);
+                return new JsonResult("The car has been updated and saved.");
             }
-            return BadRequest();
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
         
         [HttpDelete("delete")]
         public ActionResult DeleteCar(int id)
         {
-            bool success = carService.DeleteCar(id);
-            if (success)
-            {
-                return Ok();
-            }
-            return BadRequest();
-        }
-            
-        [HttpPost("saveCar")]
-        public IActionResult SaveCar(Car car)
-        {
             if (ModelState.IsValid)
             {
-                db.Cars.Add(car);
-                db.SaveChanges();
-                return new JsonResult("A new car has been saved.");
+                carService.DeleteCar(id);
+                return new JsonResult("The car has been deleted.");
             }
             else
             {

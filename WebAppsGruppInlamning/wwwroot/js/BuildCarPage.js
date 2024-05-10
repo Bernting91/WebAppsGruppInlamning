@@ -34,11 +34,12 @@ document.getElementById("buildCar").addEventListener("click", function () {
 
     $.ajax({
         type: "POST",
-        url: "/api/Car/saveCar",
+        url: "/api/Car/add",
         contentType: "application/json",
         data: JSON.stringify(data),
         success: function (response) {
             console.log(response);
+            alert(response);
         },
         error: function (xhr, textStatus, errorThrown) {
             console.error(xhr.responseText);

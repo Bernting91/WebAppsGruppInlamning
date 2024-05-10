@@ -34,7 +34,11 @@ namespace GarageClient.Objects
             Console.WriteLine(response.StatusCode);
 
             if (response.IsSuccessStatusCode)
-                Console.WriteLine("Car Updated.");
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                string reponseMessage = JsonConvert.DeserializeObject<string>(jsonResponse);
+                Console.WriteLine(reponseMessage);
+            }
             else
                 Console.WriteLine("Something went wrong.");
 
@@ -54,9 +58,15 @@ namespace GarageClient.Objects
             Console.WriteLine(response.StatusCode);
 
             if (response.IsSuccessStatusCode)
-                Console.WriteLine("Car Added.");
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                string reponseMessage = JsonConvert.DeserializeObject<string>(jsonResponse);
+                Console.WriteLine(reponseMessage);
+            }
             else
+            {
                 Console.WriteLine("Something went wrong.");
+            }
 
             Thread.Sleep(1000);
         }
@@ -69,8 +79,12 @@ namespace GarageClient.Objects
 
             Console.WriteLine(response.StatusCode);
 
-            if(response.IsSuccessStatusCode)
-                Console.WriteLine("Car Deleted");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                string reponseMessage = JsonConvert.DeserializeObject<string>(jsonResponse);
+                Console.WriteLine(reponseMessage);
+            }
             else
                 Console.WriteLine("Something went wrong.");
 
