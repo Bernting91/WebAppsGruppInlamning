@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const tyreType = document.getElementById("tyreType").value;
         const colour = document.getElementById("colour").value;
         const data = {
-            id: carId,
+            carId: carId,
             carType: carType,
             tyreType: tyreType,
             colour: colour
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             data: JSON.stringify(data),
             success: function (response) {
                 console.log(response);
-                alert("Car updated successfully!");
+                alert(response);
                 location.reload(); 
             },
             error: function (xhr, textStatus, errorThrown) {
