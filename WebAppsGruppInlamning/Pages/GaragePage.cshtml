@@ -3,7 +3,6 @@
 @{
 
 }
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="~/css/Garage.css">
@@ -14,21 +13,37 @@
         <img src="~/lib/Images/CarGarage.webp" alt="Garage Background" style="width: 100%; height: auto; display: block;">
         <div class="custom-dropdown">
             <div class="dropdown-selected">Select a car</div>
-            <div class="dropdown-options">
-                <select id="savedCars">
-                    @foreach (var item in Model.savedCars)
-                    {
-                        <option value="@item">@item.CarType</option>
-                    }
-                </select>
-            </div> <!-- Tom lista -->
+            <ul class="dropdown-options">
+                @foreach (var car in Model.savedCars)
+                {
+                    <li class="option" data-car-id="@car.CarId" data-car-type="@car.CarType" data-tyre-type="@car.TyreType" data-colour="@car.Colour">
+                        @car.CarType
+                        <span class="trashcan-icon">🗑️</span>
+                        <span class="wrench-icon">🔧</span>
+                    </li>
+                }
+            </ul>
         </div>
-        <div class="hover-area"></div>
-        <img src="~/lib/Images/Boss.webp" alt="Boss Image" class="hover-image">
-        <div class="hover-text">GO BACK TO WORK</div>
+        <div class="edit-modal" style="display: none;">
+            <div class="edit-content">
+                <span class="close">&times;</span>
+                <form id="editCarForm">
+                    <label for="carType">Car Type:</label>
+                    <input type="text" id="carType" name="carType"><br>
+                    <label for="tyreType">Tyre Type:</label>
+                    <input type="text" id="tyreType" name="tyreType"><br>
+                    <label for="colour">Colour:</label>
+                    <input type="text" id="colour" name="colour"><br>
+                    <input type="hidden" id="carId" name="carId">
+                    <button type="button" onclick="submitEdit()">Save Changes</button>
+                </form>
+            </div>
+        </div>
     </div>
     <script src="~/js/Garage.js"></script>
 </body>
 </html>
+
+
 
 
